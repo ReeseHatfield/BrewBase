@@ -4,6 +4,7 @@ public class Index {
     public static void main(String[] args) {
         BrewBase db = new BrewBase();
 
+        //instantiates db and calls introduction
 
         Scanner input = new Scanner(System.in);
         String interaction = input.nextLine().toLowerCase();
