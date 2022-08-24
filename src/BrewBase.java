@@ -55,9 +55,9 @@ public class BrewBase {
 
         ArrayList<Ingredient> drinkIngredients = new ArrayList<>();
 
-        String s = input.nextLine().replace(" ", "_");
+        String s = input.nextLine().toLowerCase().replace(" ", "_");
 
-        while(!Objects.equals(s, "Finished")){
+        while(!Objects.equals(s, "finished")){
             for (int i = 0; i < allIngredients.size(); i++) {
                 Ingredient allIngredient = allIngredients.get(i);
                 if (Objects.equals(allIngredient.getName().toLowerCase(), s.toLowerCase())) {

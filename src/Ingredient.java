@@ -4,8 +4,5 @@ public record Ingredient(String name) {
         return name;
     }
 
-    public String toString() {
-        return name;
-    }
 }
 //overload constructor with part ratio and optional boolean

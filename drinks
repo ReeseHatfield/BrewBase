@@ -1,3 +1,5 @@
-Novalee's Nameless Knockback|[Black_Coffee, Half_and_Half, Ice_Cream, Soda]
-Pumpkin Spice Latte|[Moka_Pot_Coffee, Pumpkin_Spice_Creamer, Almond_Milk]
-London Fog|[Earl_Grey_Tea, Steamed_Milk]
+Novalee's Nameless Knockback|[Ingredient[name=Ingredientname=Black_Coffee], Ingredient[name=Ingredientname=Half_and_Half], Ingredient[name=Ingredientname=Ice_Cream], Ingredient[name=Ingredientname=Soda]]
+Pumpkin Spice Latte|[Ingredient[name=Ingredientname=Moka_Pot_Coffee], Ingredient[name=Ingredientname=Pumpkin_Spice_Creamer], Ingredient[name=Ingredientname=Almond_Milk]]
+London Fog|[Ingredient[name=Ingredientname=Earl_Grey_Tea], Ingredient[name=Ingredientname=Steamed_Milk]]
+Example Drink|[Ingredient[name=Ingredientname=Black_Coffee], Ingredient[name=Ingredientname=Half_and_Half], Ingredient[name=Ingredientname=Cinnamon]]
+test2|[Ingredient[name=Black_Coffee]]
