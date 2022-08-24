@@ -1,13 +1,6 @@
 import java.util.ArrayList;
 
-public class Drink {
-    private final ArrayList<Ingredient> ingredients;
-    private final String name;
-
-    public Drink(ArrayList<Ingredient> ingredients, String name) {
-        this.ingredients = ingredients;
-        this.name = name;
-    }
+public record Drink(ArrayList<Ingredient> ingredients, String name) {
 
     @Override
     public String toString() {

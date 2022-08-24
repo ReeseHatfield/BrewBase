@@ -15,8 +15,8 @@ public class Index {
                 case "add" -> db.addDrink();
                 case "remove" -> {
                     System.out.println("Warning: Only administrator's are permitted to delete items from database");
-                    System.out.println("(Try 'sudo remove' next time");
-                    System.out.println("Proceed? (y/n");
+                    System.out.println("(Try 'sudo remove' next time)");
+                    System.out.println("Proceed? (y/n)");
                     char c = input.nextLine().toLowerCase().charAt(0);
                     if (c == 'y') {
                         db.delete();
@@ -28,7 +28,13 @@ public class Index {
 
             System.out.println("How can I help you?");
             interaction = input.nextLine().toLowerCase();
+            if(interaction.equals("exit")){
+                System.exit(0);
+            }
         }
+        //delete from name not index
+        //show commands every time
+
 
 
         db.addDrink();
