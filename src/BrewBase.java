@@ -8,8 +8,8 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class BrewBase {
-    private static ArrayList<Drink> drinks = new ArrayList<>();
-    private static File persistText = new File("drinks");
+    private ArrayList<Drink> drinks = new ArrayList<>();
+    private File persistText = new File("drinks");
     private ArrayList<Ingredient> allIngredients = initializeIngredients();
 
     public BrewBase(){
@@ -97,7 +97,7 @@ public class BrewBase {
                 """;
 
         System.out.println(s);
-        System.out.println("Commands: 'add', 'remove', 'print'");
+        System.out.println("Commands: 'add', 'remove', 'print', 'exit'");
         System.out.println("Welcome to BrewBase. How can I help you ?");
     }
 
@@ -125,18 +125,31 @@ public class BrewBase {
 
 
     public void delete(){
-        System.out.println("What is the index of the item you want deleted? ");
 
-        Scanner input = new Scanner(System.in);
-        int deletionIndex = input.nextInt();
+        System.out.println("What drink do you want deleted?");
+        Scanner input  = new Scanner(System.in);
+        String nameOfDrinkToDelete = input.nextLine();
+
+        int deletionIndex = -1;
+
+        for(int i = 0; i < drinks.size(); i ++){
+
+            //need to use the toString of the drink
+            String[] drinkNameArr = drinks.get(i).toString().split("\\|");
+
+            String currentDrinkName = drinkNameArr[0];
+            if(Objects.equals(currentDrinkName, nameOfDrinkToDelete)){
+                deletionIndex = i;
+            }
+        }
+
+        if(deletionIndex == -1){
+            System.out.println("Error: Drink not found");
+            return;
+        }
 
         drinks.remove(deletionIndex);
-
         updatePersistentFile();
-
-        //in theory this sounds easy
-        //it is not ;(
-
     }
 
     @Override
@@ -164,19 +177,7 @@ public class BrewBase {
         }
 
 
-      
         return null;
     }
-    //get core functionality working
-
-    //implement random drink
-
-    // FILE IO
-    //  Text file for all ingredients
-    //   Text file for all drinks
-    //  I think thats all??? I hope
-    // Look into other data persisten options.x
-
-    //implement gui :(
 
 }
